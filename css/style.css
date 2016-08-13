@@ -1,0 +1,990 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+/*---      index.php     ---*/
+
+.welcomeSection {
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/index/donate.jpg);
+    background-position: 50% 90%;
+    display: flex;
+}
+
+.index_buttons_div {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    margin-top: 350px;
+    width: 250px;
+    height: 200px;
+}
+
+.index_buttons {
+    width: 100%;
+    padding: 10px;
+    border: none;
+}
+
+.login {
+    background-color: rgba(196, 16, 16, 0.7);
+    border-radius: 7px;
+}
+
+.signup {
+    border-radius: 7px;
+    background-color: rgba(2, 42, 175, 0.47);
+}
+
+.guest {
+    border-radius: 7px;
+    background-color: rgba(19, 244, 45, 0.64);
+}
+
+
+/*----  header.php   ----*/
+
+header {
+    height: 70px;
+    width: 100%;
+    margin: 0;
+    display: flex;
+}
+
+.header_nav {
+    width: 100%;
+    background-color: #FEC009;
+    display: flex;
+}
+
+.header_nav ul {
+    margin: 0;
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.header_nav ul li {
+    margin-left: 20px;
+    padding: 3px;
+    flex-wrap: nowrap;
+}
+
+.header_button {
+    background-color: #FE0808;
+    padding: 3px;
+    border: none;
+    border: 1px solid #FE0808;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.header_nav ul a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+
+/*----   footer.php  -----*/
+
+footer {
+    background-color: #8b8b8b;
+    display: flex;
+    justify-content: center;
+}
+
+
+/*---- Error Message ---*/
+
+.erro {
+    margin: 30px auto;
+    background-color: #ffe471;
+    border: 1px solid #ffcf00;
+    padding: 5px;
+    width: 50%;
+    text-align: center;
+    animation: 1s anim;
+    animation: errorMessage 1s 2s; 
+    z-index: 10;
+}
+
+@keyframes anim {
+    from {
+        display: none
+    }
+    to {
+        display: block
+    }
+}
+
+@keyframes errorMessage{
+    from{display: block}
+    to{display: none}
+}
+
+/*----   login.php    ----*/
+
+.login_section_container {
+    display: flex;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url(../images/login/image-1.jpg);
+    background-position: 50% 30%;
+    background-repeat: no-repeat;
+    flex-direction: column;
+}
+
+.loginForm {
+    margin: auto;
+    display: flex;
+    width: 230px;
+}
+
+.loginForm fieldset {
+    width: 100%;
+    border: none;
+    border: 2px solid #FEC009;
+    background-color: #FEC009;
+    display: flex;
+}
+
+fieldset input[type="text"]::-webkit-input-placeholder,
+fieldset input[type="password"]::-webkit-input-placeholder {
+    text-align: center;
+}
+
+.loginForm fieldset input[type="text"] {
+    width: 90%;
+    border: none;
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.loginForm fieldset input[type="password"] {
+    border: none;
+    border-radius: 6px;
+    padding: 8px;
+    width: 90%;
+}
+
+.loginButton {
+    width: 100%;
+    padding: 8px;
+    border: none;
+    border: 1px solid #FE0808;
+    background-color: #FE0808;
+    color: white;
+    border-radius: 6px;
+}
+
+
+/*---    Signup.php     ----*/
+
+.signup_section_body {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-image: url(../images/signup/image-1.jpg);
+}
+
+.signup_section_container {
+    margin: auto;
+    width: 50%;
+    height: 40%;
+    display: flex;
+    border: 1px solid black;
+}
+
+.signupProfilePicForm {
+    display: flex;
+    width: 30%;
+}
+
+.hiddenFileInputContainter {
+    position: relative;
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    cursor: pointer;
+    margin: auto;
+}
+
+.signup_profile_pic {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.signupInputFile {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0;
+}
+
+.signup_info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 70%;
+    padding-top: 60px;
+}
+
+.signup_info input[type="text"],
+.signup_info input[type="email"] {
+    padding: 8px;
+    border-radius: 6px;
+    width: 40%;
+}
+
+.signup_name_lastname_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.signup_input_gender_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    margin-left: 20px;
+}
+
+.signup_submit_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    flex-wrap: nowrap;
+}
+
+.signup_email_number_div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+}
+
+.signup_next_button {
+    width: 80px;
+    border: 1px solid #FE0808;
+    background-color: #FE0808;
+    color: #fff;
+    padding 6px;
+    border-radius: 5px;
+    margin-right: 20px;
+}
+
+
+/*----    Signup-1.php   ----*/
+
+.signup_1_section_body {
+    background-image: url(../images/login/image-2.jpg);
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.signup_1_form {
+    margin: auto;
+    display: flex;
+}
+
+.signup1_fieldset {
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+
+.signup1_fieldset {
+    color: #fff;
+}
+
+.signup1_fieldset input[type="password"],
+.signup1_fieldset input[type="text"] {
+    padding: 8px;
+    border-radius: 6px;
+}
+
+.signup_1_username_div {
+    margin-top: 20px;
+}
+
+.signup_1_passwords_div {
+    margin-top: 20px;
+}
+
+.signup_1_submit_div {
+    margin: 10px 0 5px 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.signup1_next_button {
+    width: 80px;
+    border: 1px solid #FE0808;
+    background-color: #FE0808;
+    color: #fff;
+    padding 6px;
+    border-radius: 5px;
+    
+}
+
+
+/*-------- Side Bar   --------*/
+
+.sideBar {
+    position: fixed;
+    bottom: 0;
+    top: 0;
+    left: 0;
+    width: 3.5%;
+    background-color: #FEC009;
+    transition: all 1s;
+    display: flex;
+    align-content: center;
+    flex-direction: column;
+}
+
+.sideBar:hover {
+    width: 12%;
+}
+
+.profileName {
+    text-align: center;
+    margin: -10px 0;
+    padding: 0;
+    opacity: 0;
+    transition: all 0.5s;
+    cursor: default;
+}
+
+.sideBar:hover .profileName {
+    opacity: 1;
+    margin: 0px;
+    transition: all 0.5s;
+}
+
+.sideBar nav ul {
+    padding: 0;
+}
+
+.sideBar nav ul li {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.sideBar nav ul li:hover {
+    background-color: #16A085;
+}
+
+
+/*Current page sidebar background*/
+
+.sideList {
+    background-color: #b7a6a6;
+}
+
+.sideBar nav ul li span {
+    opacity: 0;
+    text-align: center;
+    transition: all 0s;
+    padding: 0;
+    font-size: 12pt;
+    margin: auto;
+}
+
+.sideBar:hover nav ul li span {
+    opacity: 1;
+    transition: all 1s;
+    transition-delay: 0.5s;
+}
+
+.avatar {
+    width: 40px;
+    border-radius: 50%;
+    display: block;
+    margin: 15px auto;
+    transition: all 1s;
+}
+
+.sideBar:hover .avatar {
+    width: 100px;
+    display: block;
+    margin: 15px auto;
+    transition: all 1s;
+}
+
+.material-icons.md-36 {
+    font-size: 36px;
+}
+
+.sideBar:hover + .mainSectionLoggedIn {
+    transition: all 1s;
+    left: 12.2%;
+    width: 87.8%;
+    height: 100%;
+}
+
+.mainSectionLoggedIn {
+    transition: all 1s;
+    transition: all 1s;
+    position: absolute;
+    left: 3.7%;
+    width: 96.2%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+.mainSectionGuest {
+   width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: space-between;
+}
+
+
+/*------ Top Bar.php ----*/
+
+.headerTopMenu {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    padding: 0;
+    margin: 0;
+    height: 170px;
+    width: 100%:
+}
+
+.headerImages {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    height: 110px;
+}
+
+.title {
+    width: 30%;
+    height: 70px;
+}
+
+.logo {
+    width: 370px;
+    height: 110px;
+}
+
+.headerTopMenu nav {
+    height: 60px;
+    background-color: #FEC009;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.headerTopMenu nav ul {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.headerTopMenu nav ul li {
+    padding: 3px;
+}
+
+.searchInput {
+    border: none;
+    border: 1px solid #FEC009;
+    border-radius: 4px;
+    opacity: 0.6;
+    padding: 4px;
+}
+
+
+
+.first_section {
+    height: 300px;
+    border-bottom: 1px solid white;
+}
+
+.slideshow {
+    padding: 0;
+    width: 100%;
+    height: 300px;
+    background-image: url(../images/home/slide-img1.jpg);
+}
+
+.some_Products {
+    background-color: #959191;
+    margin: 20px 0 0 0;
+}
+
+.some_Products_title {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.some_Products_Hands {
+    display: flex;
+    flex-direction: row;
+}
+
+.div-img-1 {
+    margin: -30px 0 0 0;
+    padding-right: 100px;
+    width: 50%;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.div-img-1 img {
+    width: 10%;
+}
+
+.div-img-2 {
+    margin: -30px 0 0 0;
+    height: 50px;
+    width: 50%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.div-img-2 img {
+    width: 10%;
+}
+
+.some_Products_items {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+}
+.first_div,.second_div,.third_div{
+    padding: 0;
+    width: 33.3%;
+}
+.first_pic{
+    height: 80px;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.second_pic{
+    margin: 0;
+    padding: 0;
+    height: 250px;
+    width: 100%;
+}
+.third_pic{
+    margin: 0;
+    padding: 0;
+    height: 170px;
+    width: 100%;
+}
+
+.top_Trending h2{
+    text-align: center;
+    
+}
+.pic_top_Trending{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    height: 100%ç
+}
+.top_first{
+    height: 150px;
+    width: 150px;
+    border-radius: 50%;
+    border: 4px solid gold;
+    margin: 0 20px;
+}
+.top_second{
+    border: 4px solid silver;
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    margin: 20px 0 0 0;
+}
+.top_third{
+    border: 4px solid #cd7f32;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    margin: 50px 0 0 0;
+}
+
+/*-------  FOOTER -----------*/
+.footer{
+    
+    background-color: #8b8b8b;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0;
+    margin-top: 10px;
+}
+.footer nav{
+    margin: 0;
+    padding: 0;
+}
+.footer nav ul {
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+.footer nav ul li {
+    margin: 0 10px;
+}
+.footer nav ul li img{
+    width: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+/*-------- Trending.php   ------*/
+
+.trending_Section{
+    background-color: #959191;
+    margin: 20px 0 0 0;
+}
+
+.trending_Section_Title{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.trending_Section_Hands{
+    display: flex;
+    flex-direction: row;
+}
+
+.trending_category{
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.trending_category img{
+    width: 100%;
+}
+
+
+/*-------- Contact.php  --------*/
+.contact_Section{
+    background-color: #959191;
+    height: 100%;
+    padding: 10px;
+    margin: 20px 0 0 0;
+}
+
+.contact_Section_Title{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.contact_Section_Hands{
+    display: flex;
+    flex-direction: row;
+}
+.contact_Section_Info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.contact_Section_Info div{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 5px 0 5px 0;
+    padding: 0;
+    width: 100%;
+}
+.contact_message{
+    background-color: #d9d6d6;
+    width: 100%;
+    border-radius: 10px;
+}
+.contact_name,.contact_email{
+    padding: 5px;
+    border-radius: 9px;
+    width: 100%;
+    background-color: #d9d6d6;
+}
+
+.contact_send_button{
+    width: 100px;
+    border: none;
+    border: 1px solid #8b8b8b;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+
+/*------ About.php ------*/
+.about_Section{
+    background-color: #959191;
+    height: 100%;
+    padding: 10px;
+    margin: 20px 0 0 0;
+}
+
+.about_Section_Title{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.about_Section_Hands{
+    display: flex;
+    flex-direction: row;
+}
+.about_Section_Content{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/*---- MyDonations.php ---*/
+.myDonations_Father_Section{
+    
+}
+
+.myDonations_Section{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    
+}
+.add_Div{
+    display: flex;
+    justify-content:flex-start;
+    padding: 20px 0 10px 30px;
+}
+.add_Donation_Button{
+    padding: 5px;
+    border-radius: 6px;
+}
+.donated_Items{
+    display: flex;
+    flex-direction: column;
+}
+.category_items{
+    background-color: #d8b54d;
+    margin: 15px 0 0 0;
+    padding-left: 30px;
+}
+.category_items p{
+    color: #000;
+    text-transform: uppercase;
+    
+}
+.donated_Items_sub{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 100%;
+    
+}
+
+
+
+.item_Donated_Father_Div{
+    width: 33.33%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.item_donated{
+    width: 250px;
+    height: 300px;
+    position: relative;
+}
+.item_donated img{
+    width: 250px;
+    height: 250px;
+    border-radius: 9px;
+}
+.item_donated figure{
+    margin: 0;
+    padding: 0;
+}
+.item_donated figure figcaption{
+    text-align: center;
+}
+
+.item_donated:hover .material-icons-div{
+    opacity: 1;
+    height: 100%;
+    transition: all 1s;
+}
+
+.material-icons-div{
+    width: 250px;
+    height: 300px;
+    position: absolute;
+    top: 0;
+    opacity: 0;
+    height: 0;
+    transition: all 0.2s;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.testdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    margin: 10px;
+}
+
+.deletePopupWindow{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(180, 172, 172, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.deletePopupWindowBox{
+     border: 1px solid #dbb443;
+    background-color: #dbb443;
+    width: 30%;
+    height: 30%;  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.deletePopupWindowBox p{
+    font-size: 1.2em;
+    color: #fff;
+    text-align: center;
+}
+.deleteButtonsDiv{
+    width: 80%;    
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    
+}
+.deletePopupNoButton{
+    width: 70px;
+    padding: 3px;
+}
+.deletePopupYesButton{
+    width: 70px;
+    padding: 3px;
+    border: none;
+    border: 1px solid #ff1f1f;
+    background-color: #ff1f1f;
+    color: #fff;
+}
+
+.NoDonatedItems{
+    
+}
+
+/*------- donationItem.php ------*/
+.add_content{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+}
+
+.add_item_picture{
+    width: 300px;
+    height: 300px;
+}
+
+.deleteItemButton{
+    background-color: #f71313;
+    border: none;
+    border: 1px solid #f71313;
+    border-radius: 3px;
+    padding: 4px;
+    color: #fff;
+}
+
+.inputFileDiv{
+    position: relative;
+    cursor: pointer;
+}
+.PictureInputFile{
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    cursor:pointer;
+}
+.item_info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.item_info div{
+    margin: 10px 0;
+}
+
+/*----- Trending item  page -------*/
+.noItemAvailable{
+    display: flex;
+    justify-content: center;
+}
+.noItemAvailable p {
+     color: #d0d0d0;
+    font-size: 36pt;
+}
